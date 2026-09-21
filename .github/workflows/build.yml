@@ -69,7 +69,8 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: >
-          mvn -B sonar:sonar
+          mvn -B
+          org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
           -Dsonar.projectKey=diegobotia_tester
           -Dsonar.organization=diegobotia
           -Dsonar.host.url=https://sonarcloud.io
